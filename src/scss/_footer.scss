@@ -1,0 +1,25 @@
+.footer {
+    height: 165px;
+}
+.footer__container {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+.footer__item {
+    position: relative;
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+.footer__item_blue-line:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 4px;
+    height: 40px;
+    border-radius: 2px;
+}
+.footer__item-lower {
+    padding-left: 35px;
+    margin-top: 30px;
+}

@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     babel = require('gulp-babel'),
     imagemin = require('gulp-imagemin'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    notify = require('gulp-notify')
     
     
     
@@ -63,7 +64,7 @@ gulp.task('jsProd', function() {
 gulp.task('cssProd', function() {
     return gulp.src(cssFiles.src)
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
         .pipe(rename('styles.css'))
         .pipe(autoprefixer({
             browsers: ['last 15 versions'],

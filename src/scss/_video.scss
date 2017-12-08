@@ -1,0 +1,29 @@
+.video {
+    margin: 60px auto;
+}
+
+.video__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: bold;
+    color: #c3d446;
+}
+
+.video__player {
+    width: 50%;
+    height: auto;
+    background-image: url('../img/phone_frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 60px auto;
+    video {
+        margin-left: 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .video__player {
+        width: 90%;
+    }        
+}
