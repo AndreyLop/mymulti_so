@@ -1,5 +1,9 @@
 .footer {
-    height: 165px;
+    margin-top: 20px;
+    color: #3e3e3e;
+    a {
+        color: #36b1ce;
+    }
 }
 .footer__container {
     display: flex;
@@ -18,8 +22,37 @@
     width: 4px;
     height: 40px;
     border-radius: 2px;
+    background-color: #36b1ce;
 }
 .footer__item-lower {
     padding-left: 35px;
     margin-top: 30px;
+}
+
+.social {
+    display: flex;
+}
+
+.social__item {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.footer__item-lower__social {
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer__container {
+        flex-wrap: wrap;
+    }
+    .footer__item {
+        width: 50%;
+    }
+    .footer__item-lower {
+        padding-left: 15px;
+    }
+    .footer__item-lower__social {
+        float: none;
+    }
 }

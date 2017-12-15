@@ -1,54 +1,80 @@
+.gift {
+    margin-bottom: 70px;
+}
+
 .gift__container {
     display: flex;
     .gift__item {
         display: flex;
         align-items: flex-end;
-        height: 695px;
+        height: 580px;
         flex-grow: 1;
         flex-basis: 0;
         background-size: cover;
         background-position: center;
     }
-    .gift__item_1 {
-        background-image: url('../img/gift/gift_1.jpg');
-        .gift__text {
-            background-color: rgba(7, 87, 154, .5);
-        }
-    }
-    .gift__item_2 {
-        background-image: url('../img/gift/gift_2.jpg');
-        .gift__text {
-            background-color: rgba(211, 28, 24, .5);
-        }
-    }
-    .gift__item_3 {
-        background-image: url('../img/gift/gift_3.jpg');
-        .gift__text {
-            background-color: rgba(229, 162, 0, .5);
-        }
-    }
+}
+
+.gift__item_1 {
+    background-image: url('../img/gift/gift_1.jpg');
     .gift__text {
-        text-transform: uppercase;
-        padding: 35px;
-        height: 170px;
-        font-size: 30px;
-        position: relative;
-        width: 100%;
-        span {
-            position: absolute;
-            bottom: 75px;
-          }
+        background-color: rgba(7, 87, 154, .8);
     }
 }
+.gift__item_2 {
+    background-image: url('../img/gift/gift_2.jpg');
+    .gift__text {
+        background-color: rgba(211, 28, 24, .8);
+    }
+}
+.gift__item_3 {
+    background-image: url('../img/gift/gift_3.jpg');
+    .gift__text {
+        background-color: rgba(229, 162, 0, .8);
+    }
+}
+
+.gift__text {
+    text-transform: uppercase;
+    padding: 20px;
+    height: 90px;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    line-height: 1.2;    
+}
+
+.gift__text-big-small {
+    max-width: 189px;
+}
+
+.gift__text-instantly {
+    max-width: 100px;
+}
+
+.gift__text-persent-gift {
+    max-width: 206px;
+}
+
+// @media only screen and (max-width: 1000px) {
+//     .gift__text {
+//         div {
+//             width: 100%;
+//         }
+//     }
+// }
 
 @media only screen and (max-width: 768px) {
     .gift__container {
         .gift__item {
-            height: 370px;
+            height: 450px;
         }
         .gift__text {
-            font-size: 18px;
+            font-size: 16px;
             padding: 5px;
+            display: flex;
+            align-items: center;
         }
     }
 }

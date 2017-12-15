@@ -1,58 +1,66 @@
 .myMulti {
+    margin-bottom: 30px;
     height: 100%;
-    margin-bottom: 60px;
-    position: relative;
-
 }
 
-.myMulti__top {
-    height: 100%;
-    background-color: #a7b733;
-    background: #a7b733;
-    background: -moz-linear-gradient(45deg, #a7b733 0%, #d3df78 29%, #a7b733 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #a7b733 0%,#d3df78 29%,#a7b733 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #a7b733 0%,#d3df78 29%,#a7b733 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7b733', endColorstr='#a7b733',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.logo {
+    padding-top: 60px;
+    width: 31vh;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .myMulti__container {
     height: 100%;
-    position: relative;    
+    background: #9eae2c; /* Old browsers */
+    background: -moz-linear-gradient(left, #9eae2c 1%, #d2de79 13%, #d9e389 26%, #bfcf48 50%, #9dad2b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #9eae2c 1%,#d2de79 13%,#d9e389 26%,#bfcf48 50%,#9dad2b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #9eae2c 1%,#d2de79 13%,#d9e389 26%,#bfcf48 50%,#9dad2b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9eae2c', endColorstr='#9dad2b',GradientType=1 ); /* IE6-9 */
+    .container {
+        height: 100%;
+        position: relative;
+    }
 }
 
 .myMulti__top_phone {
     position: absolute;
-    bottom: 5px;
-    height: 80%;
-    width: auto;
+    bottom: 30px;
     z-index: 1;
+    width: 31vh;
     img {
-        max-height: 90%;
-        width: auto;
+        width: 100%;
+        height: auto;
     }
 }
 
 .myMulti__hero {
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     right: 0;
     background-image: url('../img/myMulti_couple.png');
     background-size: contain;
-    background-position: bottom;
+    background-position: right bottom;
     background-repeat: no-repeat;
     width: 70%;
     height: 100%;
+}
+
+.myMulti__hero-heading {
+    font-size: 40px;
     text-transform: uppercase;
-    text-align: right;
-    font-size: 60px;            
-    h1 {
-        font-weight: bold;
+    text-align: right;    
+    font-weight: bold;
+    span {
+        font-weight: 400;
     }
 }
 
 .myMulti__hero-position {
     position: absolute;
-    bottom: 100px;
+    bottom: 40px;
     right: 20px;
 }
 
@@ -62,16 +70,21 @@
     right: 0;
     width: 100%;
     background-color: #fff;
-    padding: 5px;
+    padding: 15px 0px;
 }
 
 .buttons-container__first-section {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
+    .button {
+        margin: 0px 10px;;
+    }
 }
 
 .download-now__text {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 18px;
     color: #3e3e3e;
 }
 
@@ -79,40 +92,24 @@
     background-image: url('../img/phone_top_bg.jpg');
 }
 
-@media only screen and (max-width: 1000px) {
-    .myMulti__top_phone {
-
-    }
-    .myMulti__hero {
-        background-position: bottom;
-        width: 60%;
-    }
-    .myMulti__hero-position {
-        top: auto;
-    }   
-    
-}
-
 @media only screen and (max-width: 768px) {
-    .myMulti__top_phone {
-        left: 50%;
-        transform: translate(-50%);
-        bottom: 70px;
-        .logo {
-        }
-    }
     .myMulti__hero {
         display: none;
     }
-    
-    .buttons-container__first-section {
-        .download-now__text {
-            display: none;
-        }
-    }      
-
-    .buttons-container__first-section {
-        justify-content: center;
+    .myMulti__top_phone {
+        position: static;
+        margin: 0 auto;
     }
-    
+    .logo {
+        padding-top: 10px;
+        margin: 0 auto;
+        width: 31vh;
+        max-width: none;
+    }
+    .buttons-container__first-section {
+        flex-direction: column;
+        .button {
+            margin: 5px;
+        }
+    }
 }

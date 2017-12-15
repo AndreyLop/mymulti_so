@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     babel = require('gulp-babel'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync').create(),
-    notify = require('gulp-notify')
+    notify = require('gulp-notify'),
+    cssnano = require('gulp-cssnano')
     
     
     
@@ -70,6 +71,7 @@ gulp.task('cssProd', function() {
             browsers: ['last 15 versions'],
             cascade: false
         }))
+        .pipe(cssnano())
         .pipe(sourcemaps.write('../maps'))        
         .pipe(gulp.dest(cssFiles.dist))
         .pipe(browserSync.reload({stream:true}));

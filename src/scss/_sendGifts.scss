@@ -1,40 +1,32 @@
 
 
 .send-gifts {
-    height: 100%;
-    background-color: #a7b733;
-    background: #a7b733;
-    background: -moz-linear-gradient(45deg, #a7b733 0%, #d3df78 29%, #a7b733 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, #a7b733 0%,#d3df78 29%,#a7b733 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg, #a7b733 0%,#d3df78 29%,#a7b733 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7b733', endColorstr='#a7b733',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: #b0c133; /* Old browsers */
+    background: -moz-linear-gradient(left, #b0c133 0%, #cfdf54 50%, #a5b725 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #b0c133 0%,#cfdf54 50%,#a5b725 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #b0c133 0%,#cfdf54 50%,#a5b725 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0c133', endColorstr='#a5b725',GradientType=1 ); /* IE6-9 */
 }
 
 .send-gifts__container {
-    height: 100%;
-    position: relative;    
+    position: relative;   
+    padding-bottom: 30px; 
 }
 .send-gifts__heading {
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: bold;
-    padding-top: 20px;
-}
-.send-gits__description {
-    position: absolute;
-    height: 90%;
-    bottom: 0;
-    left: 5%;
+    padding-top: 30px;
 }
 
 .send-gits__get-points {
-    margin: 20px auto;
-    font-size: 16px;
+    margin: 9px auto;
+    font-size: 13px;
     color: #3e3e3e;
 }
 
 .send-gits__subheading {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -50,36 +42,38 @@
 }
 
 .send-gifts__phone-list {
-    display: none;
+    overflow: auto;
+    padding-left: 10px;
+    width: 181px;
+    height: 341px;
+    font-size: 12px;
+    background-image: url('../img/phone_send-gifts.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    ul {
+        list-style-type: circle;
+        li {
+            margin-bottom: 10px
+        }       
+    }
+    
 }
 
-// .send-gifts__phone {
-//     width: auto;
-//     height: 45vh;
-//     background-image: url('../img/phone_send-gifts.png');
-//     background-size: contain;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     padding-top: 1px;
-//     margin-top: -1px; 
-// }
+.send-gits__hand-container {
+    margin:30px 0px 20px 0px;
+    img {
+        display: block;
+        width: 85px;
+        height: auto;
+        margin: 0px auto;
+    }
+}
 
-// .send-gifts__phone-icon {
-//     width: 106px;
-//     height: 94px;
-//     background-image: url('../img/icon_send-gifts.png');
-//     margin: 50px auto 10px; 
-// }
-
-// .send-gifts__phone-list {
-//     ul {
-//         list-style: circle;
-//         padding: 25px;
-//     }
-//     li {
-//         margin: 10px 0px;
-//     }
-// }
+.send-gits__list-container {
+    width: 90%;
+    float: right;
+}
 
 .send-gifts__guy {
     position: absolute;
@@ -97,89 +91,41 @@
     margin-bottom: 10px;
     justify-content: flex-start;
     .button {
-        margin-left: 0px;
+        margin: 10px 20px;
+        margin-left: 0px;        
     }
 }
 .send-gifts__will-be-av {
     font-size: 12px;
 }
 
-
-@media only screen and (max-height: 668px) {
-    .send-gifts__phone {
-        height: 80%;
-        width: auto;
-        position: absolute;
-        left: 105%;
-        bottom: 95px;
-    }
-    .send-gits__description {
-        top: 100px;
-    }
-    .buttons__send-gifts {
-        flex-direction: column;
-        .button {
-            margin-bottom: 10px;
-        }
-    }
-}
-
-
-@media only screen and (max-width: 600px) and (max-height: 668px) {
-    .send-gifts__phone {
-        display: none;
-    }
-    .send-gifts__phone-list {
-        display: block;
-        ul {
-            list-style: circle;
-        }
-        li {
-            margin: 5px 0px;
-        }
-    }
-    .send-gits__subheading {
-        font-size: 18px;
-    }
-    .send-gits__description {
-        position: static;
-        margin: 0 auto;
-        width: 272px;
-    }
-    .send-gits__get-points {
-        margin: 8px auto;
-    }
+.send-gifts__will-be-av {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
+    .send-gifts__guy {
+        display: none;
+    }
     .send-gifts__heading {
-        font-size: 20px;
-        text-align: center
+        font-size: 34px;
+        text-align: center;
     }
     .send-gits__description {
-        left: 5%;
-    }
-}
-
-
-@media only screen and (max-width: 1090px) and (max-height: 668px) {
-    .send-gifts__guy {
-        display: none;
-    }
-    .send-gits__description {
-        left: 10%;
-    }
-}
-
-@media only screen and (max-width: 725px) {
-    .send-gifts__guy {
-        display: none;
-    }
-    .send-gits__description {
-        left: 10%;
+        text-align: center;
+        .buttons__send-gifts {
+            justify-content: center;
+            align-items: center;            
+        }
     }
     .buttons__send-gifts {
-        justify-content: center;
-        align-items: center;
+        .button {
+            margin: 10px 10px;
+        }
+        padding: 10px;
     }
-}
+    .send-gifts__phone-list {
+        text-align: left;
+        margin: 0 auto;
+    }
+} 
